@@ -30,7 +30,7 @@ app.get('/weather', (req,res)=> {
 })
 
 app.use((req,res)=> {
-    res.send('No se encontro la pagina')
+    res.status(404).send('No se encontro la pagina')
 })
     
 
