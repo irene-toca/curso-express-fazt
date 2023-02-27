@@ -2,8 +2,17 @@ const express = require("express");
 
 const app = express();
 
+app.get('/search', (req,res )=> {
+  console.log(req.query)
+  if(req.query.q ==='javascript books') {
+    res.send('lista de libros de javascript')
+  } else{
+    res.send('pagina normal')
+  }
+
+})
+
 app.get('/hello/:username', (req, res)=>{
-  console.log(typeof req.params.username)
   res.send(`Hello ${req.params.username.toUpperCase()}`)
 })
 app.get('/add/:x/:y',(req,res)=> {
@@ -27,8 +36,6 @@ app.get('/name/:nombre/age/:age',(req,res)=>{
   console.log(req.params)
   res.send(`El usuario ${req.params.nombre} tiene ${req.params.age} años`)
 })
-
-
 
 app.listen(3000);
 console.log(`Server on port ${3000}`);
