@@ -43,4 +43,7 @@ app.get('/products/:id', (req,res)=> {
     
     console.log(productFound );
     res.json(productFound );
-});git
+})
+
+app.listen (3000)
+console.log(`server on port ${3000}`)
