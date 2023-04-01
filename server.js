@@ -9,6 +9,8 @@ const products = [
         price: 3000
     }
 ]
+/*para que esten los todos productos añadidos hay que crear un archivo para guardarlo en nuestro proyecto*/
+
 
 app.use(morgan('dev'))
 app.use(express.json())
